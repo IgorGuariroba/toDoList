@@ -1,0 +1,44 @@
+.article {
+   display: flex;
+   justify-content: center;
+}
+
+.content {
+  align-items: flex-start;
+  width: 36.99rem;
+}
+
+.info {
+  display: flex;
+  justify-content: space-between;
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+
+.created {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  color: var(--blue-200);
+}
+
+.created span {
+  background: var(--gray-400);
+  color: var(--gray-200);
+  padding: 2px 8px;
+  border-radius: 999px;
+}
+
+.concluded {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  color: var(--purple-200);
+}
+
+.concluded > span {
+  background: var(--gray-400);
+  color: var(--gray-200);
+  padding: 2px 8px;
+  border-radius: 999px;
+}

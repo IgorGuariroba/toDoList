@@ -1,0 +1,31 @@
+.search {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+
+  margin-top: calc(0px - 0.6rem - 6px);
+  margin-bottom: 3.68rem;
+}
+
+.search input {
+  width: calc(36.88rem - 5.62rem);
+  height: 3.38rem;
+  background: var(--gray-500);
+  border: 1px solid var(--gray-700);
+  box-sizing: border-box;
+  border-radius: 8px;
+}
+
+.criar {
+  background: var(--blue-400);
+  color: var(--gray-100);
+  border-radius: 8px;
+  width: 5.62rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  gap: 0.5rem;
+  border: none;
+}

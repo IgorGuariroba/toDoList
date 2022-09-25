@@ -1,0 +1,25 @@
+.header {
+  padding: 3.4rem 0;
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  background: var(--gray-700);
+}
+
+
+.title {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 900;
+  font-size: 2.5rem;
+  line-height: 3rem;
+  color: var(--blue-200);
+}
+
+.title > span {
+  color: var(--purple-700);
+}
+
+.logo {
+  height: 2.25rem;
+}
