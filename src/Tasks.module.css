@@ -110,13 +110,38 @@
   color: var(--gray-500);
 }
 
-.task input[type=checkbox]:checked ~ .input {
+.task input[type=checkbox]:checked~.input {
   background: var(--purple-700);
   border: solid 1px var(--purple-700);
   color: var(--gray-100);
 }
 
-.task input[type=checkbox]:checked ~ p{
+.task input[type=checkbox]:checked~p {
   text-decoration: line-through;
+  color: var(--gray-300);
+}
+
+.zeroTask img {
+  width: 3rem;
+  height: 3rem;
+  display: block;
+  margin-bottom: 1.5rem;
+}
+
+.zeroTask {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: justify;
+  font-size: 1rem;
+}
+
+.zeroTask p {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 140%;
   color: var(--gray-300);
 }

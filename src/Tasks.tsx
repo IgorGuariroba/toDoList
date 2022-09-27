@@ -1,7 +1,11 @@
 import { Trash } from 'phosphor-react';
 import style from './Tasks.module.css';
 
+import taskImg from './assets/Clipboard.png';
+import { useState } from 'react';
+
 export function Tasks() {
+  const [showElement, setShowElement] = useState(false)
   return (
     <article className={style.article}>
       <div className={style.content}>
@@ -23,7 +27,15 @@ export function Tasks() {
             </div>
             <button><Trash size={24} /></button>
           </section>
-          
+          {
+            showElement ? <div className={style.zeroTask}>
+              <img src={taskImg} alt="icon de tarefa" />
+              <p>Você ainda não tem tarefas cadastradas </p>
+              <p>Crie tarefas e organize seus itens a fazer</p>
+            </div> : ''
+          }
+
+
         </div>
 
       </div>
