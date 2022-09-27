@@ -61,6 +61,7 @@
   border: solid 1px var(--gray-400);
   border-radius: 8px;
   color: var(--gray-100);
+  height: 4.5rem;
 }
 
 .task div {
@@ -79,6 +80,8 @@
   background: var(--gray-500);
   color: var(--gray-300);
   transition: color 0.2s;
+  display: flex;
+  justify-content: flex-start;
 }
 
 .task button:hover {

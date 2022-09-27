@@ -23,15 +23,7 @@ export function Tasks() {
             </div>
             <button><Trash size={24} /></button>
           </section>
-
-          <section className={style.task}>
-            <div>
-              <input type="checkbox" name="" id="" />
-              <span className={style.input}>&#10004;</span>
-              <p>Teste de produção com vocês</p>
-            </div>
-            <button><Trash size={24} /></button>
-          </section>
+          
         </div>
 
       </div>
