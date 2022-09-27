@@ -17,9 +17,8 @@ export function Tasks() {
         <div className={style.tasks}>
           <section className={style.task}>
             <div>
-              <span className={style.input}>
-                <input type="checkbox" name="" id="" />
-              </span>
+              <input type="checkbox" name="" id="" />
+              <span className={style.input}>&#10004;</span>
               <p>Teaste 123</p>
             </div>
             <button><Trash size={24} /></button>
@@ -27,10 +26,9 @@ export function Tasks() {
 
           <section className={style.task}>
             <div>
-              <span className={style.input}>
-                <input type="checkbox" name="" id="" />
-              </span>
-              <p>  Teste de produção com vocês</p>
+              <input type="checkbox" name="" id="" />
+              <span className={style.input}>&#10004;</span>
+              <p>Teste de produção com vocês</p>
             </div>
             <button><Trash size={24} /></button>
           </section>
