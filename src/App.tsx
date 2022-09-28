@@ -30,7 +30,7 @@ function App() {
         return task;
       }
     })
-    console.log(TasksWithoutDeleteOne)
+    setConcluded(concluded - 1);
     settasks(TasksWithoutDeleteOne);
   }
 
