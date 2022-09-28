@@ -7,15 +7,17 @@ import style from './App.module.css';
 import { Tasks } from './Tasks';
 
 interface Tasks {
-  id: string
-  content: string
+  id: string;
+  content: string;
+  concluded: boolean;
 }
 
 function App() {
 
   const [tasks, settasks] = useState([{
     id: '',
-    content: ''
+    content: '',
+    concluded: false
   }
   ])
 
@@ -29,16 +31,39 @@ function App() {
       if (task.id != TaskToDelete) {
         return task;
       }
+
+      if (task.id === TaskToDelete) {
+        if(task.concluded === true){
+          setConcluded(concluded - 1)
+        }
+      }
     })
-    setConcluded(concluded - 1);
     settasks(TasksWithoutDeleteOne);
   }
 
-  function concludedTask(situation: boolean) {
+  function concludedTask(situation: boolean, id: string) {
 
     if (situation) {
+
+     const taskConcluded = tasks.map((task) => { 
+        if(task.id === id){
+          task.concluded = true;
+        }
+        return task;
+      })
+      settasks(taskConcluded);
       setConcluded(concluded + 1)
+
     } else {
+
+      const taskConcluded = tasks.map((task) => { 
+        if(task.id === id){
+          task.concluded = false;
+        }
+        return task;
+      })
+
+      settasks(taskConcluded);
       setConcluded(concluded - 1)
     }
   }
@@ -46,7 +71,7 @@ function App() {
   function handleCreateNewTask(event: FormEvent) {
     event.preventDefault();
 
-    settasks([...tasks, { id: task, content: task }]);
+    settasks([...tasks, { id: task, content: task, concluded: false}]);
     setNewTask('')
   }
 
