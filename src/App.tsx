@@ -21,6 +21,17 @@ function App() {
 
   const [task, setNewTask] = useState('');
 
+
+  function deleteTask(TaskToDelete: string) {
+    const TasksWithoutDeleteOne = tasks.filter(task => {
+      if (task.id != TaskToDelete) {
+        return task;
+      }
+    })
+    console.log(TasksWithoutDeleteOne)
+    settasks(TasksWithoutDeleteOne);
+  }
+
   function handleCreateNewTask(event: FormEvent) {
     event.preventDefault();
 
@@ -46,7 +57,6 @@ function App() {
       return 0;
     }, 0)
 
-    console.log(countertask);
     return countertask;
   }
 
@@ -93,6 +103,7 @@ function App() {
                       key={newtask.id}
                       content={newtask.content}
                       id={newtask.id}
+                      onDeleteTask={deleteTask}
                     />)
                   }
                 })

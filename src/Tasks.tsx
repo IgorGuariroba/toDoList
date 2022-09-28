@@ -6,9 +6,15 @@ import style from './Tasks.module.css';
 interface TaskProps {
   id: string;
   content: string;
+  onDeleteTask: (id: string) => void
 }
-export function Tasks({ content, id }: TaskProps) {
-  const istarefa = content != undefined;
+
+
+export function Tasks({ content, id, onDeleteTask }: TaskProps) {
+
+  function handleDeleteTask() {
+    onDeleteTask(id)
+  }
 
   return (
     <section className={style.task}>
@@ -17,7 +23,9 @@ export function Tasks({ content, id }: TaskProps) {
         <span className={style.input}>&#10004;</span>
         <p>{content}</p>
       </div>
-      <button><Trash size={24} /></button>
+      <button onClick={handleDeleteTask} title="Deletar Tarefa">
+        <Trash size={24} />
+      </button>
     </section>
   )
 }
