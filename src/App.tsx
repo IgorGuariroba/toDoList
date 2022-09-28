@@ -21,6 +21,8 @@ function App() {
 
   const [task, setNewTask] = useState('');
 
+  const [concluded, setConcluded] = useState(0);
+
 
   function deleteTask(TaskToDelete: string) {
     const TasksWithoutDeleteOne = tasks.filter(task => {
@@ -30,6 +32,15 @@ function App() {
     })
     console.log(TasksWithoutDeleteOne)
     settasks(TasksWithoutDeleteOne);
+  }
+
+  function concludedTask(situation: boolean) {
+
+    if (situation) {
+      setConcluded(concluded + 1)
+    } else {
+      setConcluded(concluded - 1)
+    }
   }
 
   function handleCreateNewTask(event: FormEvent) {
@@ -88,10 +99,10 @@ function App() {
           <div className={style.contentTarefa}>
             <header className={style.info}>
               <div>
-                <p className={style.created}>Tarefas criadas <span>5</span></p>
+                <p className={style.created}>Tarefas criadas <span>{calcTasks()}</span></p>
               </div>
               <div>
-                <p className={style.concluded}>Concluidas <span>2 de 5</span></p>
+                <p className={style.concluded}>Concluidas <span>{concluded} de {calcTasks()}</span></p>
               </div>
             </header>
 
@@ -104,6 +115,7 @@ function App() {
                       content={newtask.content}
                       id={newtask.id}
                       onDeleteTask={deleteTask}
+                      onConcluidTask={concludedTask}
                     />)
                   }
                 })

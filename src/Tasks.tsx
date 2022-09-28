@@ -7,19 +7,24 @@ interface TaskProps {
   id: string;
   content: string;
   onDeleteTask: (id: string) => void
+  onConcluidTask: (situation: boolean) => void
 }
 
 
-export function Tasks({ content, id, onDeleteTask }: TaskProps) {
+export function Tasks({ content, id, onDeleteTask, onConcluidTask }: TaskProps) {
 
   function handleDeleteTask() {
     onDeleteTask(id)
   }
 
+  function HandleConcluidTask(event: React.MouseEvent<HTMLInputElement >) {
+    onConcluidTask(event.currentTarget.checked)
+  }
+
   return (
     <section className={style.task}>
       <div>
-        <input type="checkbox" name="" id={id} />
+        <input onClick={HandleConcluidTask} type="checkbox" name="" id={id} />
         <span className={style.input}>&#10004;</span>
         <p>{content}</p>
       </div>
