@@ -57,6 +57,13 @@
   color: var(--gray-500);
 }
 
+.task .input:hover {
+  background: var(--purple-700);
+  border: solid 1px var(--purple-700);
+  color: var(--gray-100);
+  cursor: pointer;
+}
+
 .task input[type=checkbox]:checked~.input {
   background: var(--purple-700);
   border: solid 1px var(--purple-700);

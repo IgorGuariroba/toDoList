@@ -18,6 +18,10 @@
   color: var(--gray-100);
 }
 
+.search input:focus {
+  border: 1px solid var(--purple-200);
+}
+
 .criar {
   background: var(--blue-400);
   color: var(--gray-100);
@@ -30,6 +34,11 @@
   padding: 1rem;
   gap: 0.5rem;
   border: none;
+  cursor: pointer;
+}
+
+.criar:hover {
+  background: var(--blue-200);
 }
 
 .article {
