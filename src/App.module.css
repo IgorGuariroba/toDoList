@@ -119,3 +119,13 @@
   line-height: 140%;
   color: var(--gray-300);
 }
+
+@media (max-width: 768px){
+  .search input {
+    width: calc(25.88rem - 5.62rem);
+  }
+
+  .contentTarefa{
+    width: 26.99rem;
+  }
+}
